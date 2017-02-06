@@ -80,15 +80,47 @@
 		D5F32EFC1E46A8C3004F0884 /* Notifire */ = {
 			isa = PBXGroup;
 			children = (
-				D5F32EFD1E46A8C3004F0884 /* AppDelegate.swift */,
-				D5F32EFF1E46A8C3004F0884 /* ViewController.swift */,
-				D5F32F011E46A8C3004F0884 /* Main.storyboard */,
-				D5F32F041E46A8C3004F0884 /* Assets.xcassets */,
-				D5F32F061E46A8C3004F0884 /* LaunchScreen.storyboard */,
-				D5F32F091E46A8C3004F0884 /* Info.plist */,
-				D5F32F0F1E46A98B004F0884 /* GoogleService-Info.plist */,
+				D5F32F141E4832C7004F0884 /* Model */,
+				D5F32F131E4832C0004F0884 /* View */,
+				D5F32F121E4832B0004F0884 /* Controller */,
+				D5F32F111E483299004F0884 /* Resources */,
 			);
 			path = Notifire;
+			sourceTree = "<group>";
+		};
+		D5F32F111E483299004F0884 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D5F32F091E46A8C3004F0884 /* Info.plist */,
+				D5F32F0F1E46A98B004F0884 /* GoogleService-Info.plist */,
+				D5F32F041E46A8C3004F0884 /* Assets.xcassets */,
+				D5F32EFD1E46A8C3004F0884 /* AppDelegate.swift */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D5F32F121E4832B0004F0884 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5F32EFF1E46A8C3004F0884 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D5F32F131E4832C0004F0884 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5F32F011E46A8C3004F0884 /* Main.storyboard */,
+				D5F32F061E46A8C3004F0884 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D5F32F141E4832C7004F0884 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +415,7 @@
 				D5F32F0E1E46A8C3004F0884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
