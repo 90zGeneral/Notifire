@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>781113588750-qnfnqd81n7mmc391nfvm4g7kkfqosraq.apps.googleusercontent.com</string>
+	<string>781113588750-9fbpaajog44v6gnvlcc2ctco0m39h206.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.781113588750-qnfnqd81n7mmc391nfvm4g7kkfqosraq</string>
+	<string>com.googleusercontent.apps.781113588750-9fbpaajog44v6gnvlcc2ctco0m39h206</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCSzEcyWZM85234JjhtPOXz5pYyQihD9CM</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.Italyte.Notifire</string>
+	<string>com.italytes.Notifire</string>
 	<key>PROJECT_ID</key>
 	<string>notifire-a4821</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:781113588750:ios:7ef00a088c518e98</string>
+	<string>1:781113588750:ios:e7c44939af8c74ac</string>
 	<key>DATABASE_URL</key>
 	<string>https://notifire-a4821.firebaseio.com</string>
 </dict>
