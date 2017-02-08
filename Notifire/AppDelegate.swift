@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,8 +21,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        //Check which iOS version to run on
+        if #available(iOS 9.0, *) {
+            let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            
+            //Register to listen for push notifications
+            application.registerUserNotificationSettings(settings)
+            application.registerForRemoteNotifications()
+            
+        }else {
+            let types: UIRemoteNotificationType = [.alert, .badge, .sound]
+            
+            application.registerForRemoteNotifications(matching: types)
+        }
+        
         //Connect to Firebase server 
         FIRApp.configure()
+        
+        //Make this appDelegate an observer to listen for notifications by token refresh and then call the tokenRefresh method.
+        NotificationCenter.default.addObserver(self, selector: #selector(self.tokenRefresh(notification:)), name: NSNotification.Name.firInstanceIDTokenRefresh, object: nil)
         
         return true
     }
@@ -46,6 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         
+        //Function Call
         connectToFCM()
     }
 
@@ -55,10 +74,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //Get the refresh token
     func tokenRefresh(notification: NSNotification) {
-        let refreshedToken = FIRInstanceID.instanceID().token()!
+        let refreshedToken = FIRInstanceID.instanceID().token()
         
         print("InstanceID Token: \(refreshedToken)")
         
+        //Function Call
         connectToFCM()
     }
     
