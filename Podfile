@@ -7,5 +7,5 @@ target 'Notifire' do
 
   # Pods for Notifire
   pod 'Firebase'
-
+  pod 'Firebase/Messaging'
 end
